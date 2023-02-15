@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       Product.hasMany(models.production_item, {
         foreignKey:'_id',
-       // primaryKey: true
+        //primaryKey: true
       })
     }
   }
@@ -22,9 +22,9 @@ module.exports = (sequelize, DataTypes) => {
     box_number: DataTypes.STRING,
     default_time_cycle: DataTypes.NUMBER,
     description: DataTypes.STRING,
-    product_image_name: DataTypes.STRING,
+    product_image_name: {type: DataTypes.STRING},
     box_image_name: DataTypes.STRING,
-    id: DataTypes.STRING,
+    id: {primaryKey: true, type: DataTypes.STRING},
     FILIAL: DataTypes.STRING,
     DELET: DataTypes.STRING
   }, {

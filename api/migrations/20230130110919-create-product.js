@@ -31,7 +31,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       id: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       FILIAL: {
         type: Sequelize.STRING

@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
     operator_id: DataTypes.STRING,
     bench_id: DataTypes.STRING,
     cod: DataTypes.STRING,
-    id: DataTypes.STRING,
+    id: {primaryKey:true, type: DataTypes.STRING},
     FILIAL: DataTypes.STRING,
     D_E_L_E_T_: DataTypes.STRING
   }, {
