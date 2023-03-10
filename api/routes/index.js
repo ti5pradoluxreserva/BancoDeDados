@@ -1,8 +1,8 @@
-const bodyParser = require('body-parser')
-const setup = require('./setupRoute')
+import { json } from 'body-parser'
+import setup from './setupRoute'
 
-module.exports = app => {
-    app.use(bodyParser.json())
+export default app => {
+    app.use(json())
     app.use(setup)
 
 }

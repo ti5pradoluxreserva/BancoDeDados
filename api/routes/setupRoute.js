@@ -1,8 +1,9 @@
-const { Router } = require('express')
-const SetupController = require('../controllers/SetupController')
+import { Router } from 'express'
+import { pegaTodoSetup, criaSetup } from '../controllers/SetupController'
 
 const router = Router()
 
-router.get('/setup', SetupController.pegaTodoSetup)
+router.get('/setup', pegaTodoSetup)
+router.post('/pessoas', criaSetup)
 
-module.exports = router
+export default router
